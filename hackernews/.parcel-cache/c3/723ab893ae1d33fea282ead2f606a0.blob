@@ -454,10 +454,10 @@ const ul = document.createElement('ul');
 for(let i = 0; i < 10; ++i){
     const li = document.createElement('li');
     li.innerHTML = newsFeed[i].title;
-    ul.appendChild(li);
+    ul.appendChilc(li);
 }
 
 document.getElementById('root').appendChild(ul);
 },{}]},["2FmRy","6fOLN"], "6fOLN", "parcelRequire2f4c")
 
-//# sourceMappingURL=index.1397955d.js.map
+//# sourceMappingURL=index.HASH_REF_147c3be9838f78fc816d5dfc1397955d.js.map
