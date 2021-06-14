@@ -442,7 +442,6 @@ id) /*: string*/
 }
 
 },{}],"6fOLN":[function(require,module,exports) {
-const container = document.getElementById('root');
 const ajax = new XMLHttpRequest();
 const content = document.createElement('div');
 const NEWS_URL = 'https://api.hnpwa.com/v0/news/1.json';
@@ -478,8 +477,8 @@ for(let i = 0; i < 10; ++i){
     ul.appendChild(li);
 }
 
-container.appendChild(ul);
-container.appendChild(content);
+document.getElementById('root').appendChild(ul);
+document.getElementById('root').appendChild(content);
 },{}]},["2FmRy","6fOLN"], "6fOLN", "parcelRequire2f4c")
 
-//# sourceMappingURL=index.1397955d.js.map
+//# sourceMappingURL=index.HASH_REF_147c3be9838f78fc816d5dfc1397955d.js.map
