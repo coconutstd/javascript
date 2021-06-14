@@ -12,7 +12,7 @@ for(let i = 0; i < 10; ++i){
     const a = document.createElement('a');
 
     a.href = '#';
-    a.innerHTML = `${newsFeed[i].title} (${newsFeed[i].comments_count})`;
+    a.innerHTML = `${newsFeed[i].title} (${newsFeed[i].comments.count})`;
 
     li.appendChild(a);
     ul.appendChild(li);
