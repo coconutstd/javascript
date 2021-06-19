@@ -463,7 +463,7 @@ function newsFeed() {
 
     newsList.push('<ul>');
 
-    for(let i = (store.currentPage - 1) * 10; i < store.currentPage * 10; ++i){
+    for(let i = 0; i < 10; ++i){
         newsList.push(`
            <li>
                <a href="#/show/${newsFeed[i].id}">
@@ -513,4 +513,4 @@ window.addEventListener('hashchange', router);
 router();
 },{}]},["2FmRy","6fOLN"], "6fOLN", "parcelRequire2f4c")
 
-//# sourceMappingURL=index.1397955d.js.map
+//# sourceMappingURL=index.HASH_REF_147c3be9838f78fc816d5dfc1397955d.js.map
