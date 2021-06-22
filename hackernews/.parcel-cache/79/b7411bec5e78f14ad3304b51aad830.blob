@@ -39,7 +39,7 @@ function newsFeed() {
 }
 
 function newsDetail() {
-    const id = location.hash.substr(7);
+    const id = location.hash.substr(1);
     const newsContent = getData(CONTENT_URL.replace('@id', id));
     
     container.innerHTML = `
