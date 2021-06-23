@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HN client</title>
+    <link href="ec9ea45c60655bb19c4f2c8c817e49bc" rel="stylesheet">
+    <link rel="stylesheet" href="7f96f5a568c396620c6e89e6e5790b69" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+</head>
+<body>
+    <noscript>
+        You need to enable Javascript to run this app.
+    </noscript>
+    <div id="root">
+    </div>
+    <script src="f2f8a22bcff0afc2e0d4c9e559c00b60" type="module"></script>
+</body>
+</html>
