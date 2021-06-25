@@ -117,13 +117,6 @@ function newsFeed() {
     </div>
   `;
 
-  for (let i = 0; i < store.feeds.length; ++i) {
-    if (store.feeds[i].id === Number(id)) {
-      store.feeds[i].read = true;
-      break;
-    }
-  }
-
   function makeComment(comments, called = 0) {
     const commentString = [];
 
