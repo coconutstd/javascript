@@ -4,3 +4,12 @@ let apple = 10;
 // let 12apple = 10;
 // let a pple = 10;
 // let a@sdfe = 10;
+
+
+// 객체 속성으로서의 식별자
+const go = {
+    apple : 10,
+    ['apple juice'] : 11
+};
+
+const doubleAppleJuice = go.apple + go['apple juice'];
