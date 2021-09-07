@@ -542,8 +542,8 @@ function newsFeed() {
   updateView(template);
 }
 function newsDetail() {
+  const Api = new NewsDetailApi(NEWS_URL);
   const id = location.hash.substr(7);
-  const Api = new NewsDetailApi(CONTENT_URL.replace('@id', id));
   const newsContent = Api.getData();
   let template = `
     <div class="bg-gray-600 min-h-screen pb-8">
@@ -616,4 +616,4 @@ router();
 
 },{}]},["5SEBf","1Lb9z"], "1Lb9z", "parcelRequire2f4c")
 
-//# sourceMappingURL=index.8e0f6adf.js.map
+//# sourceMappingURL=index.HASH_REF_e57abe7f09ec81b6ec9f579a8e0f6adf.js.map
