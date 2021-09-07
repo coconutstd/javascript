@@ -37,6 +37,20 @@ const store: Store = {
   feeds: [],
 };
 
+class Api {
+  url : string;
+  ajax : XMLHttpRequest;
+
+  constructor (url : string) {
+    this.url = url;
+    this.ajax = new XMLHttpRequest();
+  }
+}
+
+class NewsFeedApi extends Api {
+  
+}
+
 function getData<AjaxResponse>(url: string): AjaxResponse {
   ajax.open('GET', url, false);
   ajax.send();
