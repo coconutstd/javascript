@@ -37,6 +37,10 @@ const store: Store = {
   feeds: [],
 };
 
+function applyApiMixins(targetClass : any, baseClasses : any[]) : void {
+
+}
+
 class Api {
   url : string;
   ajax : XMLHttpRequest;
