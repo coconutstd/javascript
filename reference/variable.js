@@ -5,7 +5,8 @@ let o = {
     isLoading: true,
 }
 
-let o2 = o;
-o2.isLoading = false;
-
+function foo(o) {
+    o.isLoading = false;
+}
+foo(o);
 console.log("done");
