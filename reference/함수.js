@@ -10,3 +10,14 @@ const myFunction2 = function () {
 };
 
 myFunction2();
+
+function sum(...args) {
+    let s = 0;
+    for(let i = 0; args.length; ++i){
+        s += args[i];
+    }
+    return s;
+}
+
+
+console.log(sum(1,2,3));
