@@ -20,4 +20,10 @@ function sum(...args) {
 }
 
 
+const arr = [1, 2];
+// 자바스크립트에는 기본적으로 함수 호출하는 방법 3가지가 있다. 
+// 그중 2가지
+sum.apply(null, arr);
+sum.call(null, 1, 2);
+
 console.log(sum(1,2,3));
