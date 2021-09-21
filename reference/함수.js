@@ -19,6 +19,14 @@ function sum(...args) {
     return s;
 }
 
+const sumV2 = (a, b, ...args) => {
+    let s = 0;
+    for(let i = 0; args.length; ++i){
+        s += args[i];
+    }
+    return s;
+}
+
 
 const arr = [1, 2];
 // 자바스크립트에는 기본적으로 함수 호출하는 방법 3가지가 있다. 
