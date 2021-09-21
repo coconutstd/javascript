@@ -35,3 +35,15 @@ sum.apply(null, arr);
 sum.call(null, 1, 2);
 
 console.log(sum(1,2,3));
+
+function* gen() {
+    yield 10;
+    yield 20;
+    yield 30;
+}
+
+const g = gen();
+
+g.next();
+g.next();
+g.next();
