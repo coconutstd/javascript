@@ -68,6 +68,14 @@ class NewsDetailApi extends Api {
     return this.getRequest<NewsDetail>();
   }
 }
+// TODO
+class NewsFeedView {
+
+}
+// TODO
+class NewsDetailView {
+
+}
 
 function makeFeeds(feeds: NewsFeed[]): NewsFeed[] {
   for (let i = 0; i < feeds.length; i++) {
