@@ -1,5 +1,10 @@
+type myObj = {
+    name?: string,
+    age: number,
+    getAge: () => number,
+}
 
-const obj = {
+const obj : myObj = {
     name: 'junui',
     age: 29,
     getAge: function() {
@@ -19,7 +24,12 @@ class Person {
             this._bloodType = btype;
         }
     }
+
+    get bloodType() {
+        return `${this._bloodType} 형`;
+    }
 }
 
 const p1 = new Person('A')
 p1.bloodType = 'B';
+console.log(p1.bloodType);
