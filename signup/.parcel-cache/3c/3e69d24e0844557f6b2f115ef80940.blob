@@ -1,0 +1,7 @@
+var _app = require('./app');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _appDefault = _parcelHelpers.interopDefault(_app);
+const app = new _appDefault.default('#root', {
+  title: 'Javascript & TypeScript Essential Chapter 5 - Sign up'
+});
+app.render();

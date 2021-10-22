@@ -1,0 +1,27 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+var _appTemplate = require('./app.template');
+var _appTemplateDefault = _parcelHelpers.interopDefault(_appTemplate);
+var _views = require('./views');
+class App {
+  template = _appTemplateDefault.default;
+  active = false;
+  constructor(container, data = {}) {
+    this.container = document.querySelector(container);
+    this.data = data;
+    this.fields = [];
+    this.initialize();
+    setInterval(this.validFieldMonitor, 1000 / 30);
+  }
+  initialize = () => {
+    const nameField = new _views.TextField('#required-fields', {
+      id: 'name',
+      label: '이름',
+      type: 'text',
+      placeholder: '이름을 입력해주세요',
+      require: true
+    });
+    const idField = new _views.TextField('#required-fields', {});
+  };
+}
+exports.default = App;
