@@ -28,7 +28,7 @@ interface NewsComment extends News {
   readonly level: number;
 }
 
-const container: HTMLElement | null = document.getElementById('root');
+
 const ajax: XMLHttpRequest = new XMLHttpRequest();
 const NEWS_URL = 'https://api.hnpwa.com/v0/news/1.json';
 const CONTENT_URL = 'https://api.hnpwa.com/v0/item/@id.json';
@@ -90,10 +90,9 @@ class View {
 
 // TODO
 class NewsFeedView extends View {
-  constructor() {
-    const Api = new NewsFeedApi(NEWS_URL);
-    
-    const newsList = [];
+  api: NewsFeedApi;
+  feeds: NewsFeed[];
+  constructor(containerId: string) {
     let template = `
     <div class="bg-gray-600 min-h-screen">
       <div class="bg-white text-xl">
@@ -118,9 +117,15 @@ class NewsFeedView extends View {
       </div>
     </div>
     `;
+    super(containerId, template)
+    this.api = new NewsFeedApi(NEWS_URL);
+    this.feeds = store.feeds;
+    const newsList = [];
+    
 
-    if (newsFeed.length === 0) {
-    newsFeed = store.feeds = makeFeeds(Api.getData());
+    if (this.feeds.length === 0) {
+    this.feeds = store.feeds = this.api.getData();
+    this.makeFeeds();
     }
   }
 
@@ -156,12 +161,10 @@ class NewsFeedView extends View {
   }
 
 
-  makeFeeds(feeds: NewsFeed[]): NewsFeed[] {
-    for (let i = 0; i < feeds.length; i++) {
-      feeds[i].read = false;
+  makeFeeds(): void{
+    for (let i = 0; i < this.feeds.length; i++) {
+      this.feeds[i].read = false;
     }
-
-    return feeds;
   }
 }
 // TODO
