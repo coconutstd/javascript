@@ -7,12 +7,9 @@ function ol(child: string): string {
 }
 
 function makeLi(
-    container: (child: string) => string,
-    contents: string[]): string {
-    
-    const liList = [];
-
-    for(const content of contents){
+    container: (child: string) => string, contents: string[]): string {
+      const liList = [];
+      for(const content of contents){
         liList.push(`<li>${content}</li>`);
     }
     
